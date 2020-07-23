@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="BestMovies" customModuleProvider="target">
             <connections>
+                <outlet property="spinner" destination="P27-Ew-t3K" id="8o5-G1-86e"/>
+                <outlet property="tableView" destination="Znt-x7-Blw" id="56k-am-neY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,20 +19,26 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BestMoview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2u-rV-bfI">
-                    <rect key="frame" x="153.5" y="436" width="107" height="24"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Znt-x7-Blw">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="P27-Ew-t3K">
+                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                    <color key="color" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="r2u-rV-bfI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4pk-sP-VZS"/>
-                <constraint firstItem="r2u-rV-bfI" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="OBG-dN-QJr"/>
+                <constraint firstItem="P27-Ew-t3K" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="47m-M1-p6B"/>
+                <constraint firstItem="P27-Ew-t3K" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5GZ-xr-lhl"/>
+                <constraint firstItem="Znt-x7-Blw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BzR-C3-Vov"/>
+                <constraint firstItem="Znt-x7-Blw" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="RUV-6a-b2n"/>
+                <constraint firstItem="Znt-x7-Blw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ZdK-89-lQa"/>
+                <constraint firstItem="Znt-x7-Blw" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="uWo-5j-pbd"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="141" y="154"/>
+            <point key="canvasLocation" x="140.57971014492756" y="153.34821428571428"/>
         </view>
     </objects>
 </document>
