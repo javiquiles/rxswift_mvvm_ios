@@ -21,6 +21,8 @@
 		63431F4F24CFB75300D5CD05 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63431F4E24CFB75300D5CD05 /* HomeRepository.swift */; };
 		63431F5524D2FBD800D5CD05 /* SchedulerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63431F5424D2FBD700D5CD05 /* SchedulerProvider.swift */; };
 		63431F5724D8F16400D5CD05 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63431F5624D8F16400D5CD05 /* HomeModel.swift */; };
+		63431F5A24D9A1A700D5CD05 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63431F5824D9A1A700D5CD05 /* MovieCell.swift */; };
+		63431F5B24D9A1A700D5CD05 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63431F5924D9A1A700D5CD05 /* MovieCell.xib */; };
 		F7B248C3E5C610336D619E13 /* Pods_BestMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B20DAF119F434BDB4A8374 /* Pods_BestMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,8 @@
 		63431F4E24CFB75300D5CD05 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		63431F5424D2FBD700D5CD05 /* SchedulerProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulerProvider.swift; sourceTree = "<group>"; };
 		63431F5624D8F16400D5CD05 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		63431F5824D9A1A700D5CD05 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		63431F5924D9A1A700D5CD05 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 		A5609AFB421A99AA6EFF3ABB /* Pods-BestMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestMovies.debug.xcconfig"; path = "Target Support Files/Pods-BestMovies/Pods-BestMovies.debug.xcconfig"; sourceTree = "<group>"; };
 		C8075AD2C90BC072865902D5 /* Pods-BestMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestMovies.release.xcconfig"; path = "Target Support Files/Pods-BestMovies/Pods-BestMovies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +125,8 @@
 			children = (
 				63431F2124C7D20900D5CD05 /* HomeViewController.swift */,
 				63431F2224C7D20900D5CD05 /* HomeViewController.xib */,
+				63431F5824D9A1A700D5CD05 /* MovieCell.swift */,
+				63431F5924D9A1A700D5CD05 /* MovieCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -257,6 +263,7 @@
 			files = (
 				63431F1824C7CE9200D5CD05 /* LaunchScreen.storyboard in Resources */,
 				63431F1524C7CE9200D5CD05 /* Assets.xcassets in Resources */,
+				63431F5B24D9A1A700D5CD05 /* MovieCell.xib in Resources */,
 				63431F2424C7D20900D5CD05 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +319,7 @@
 			files = (
 				63431F0C24C7CE8E00D5CD05 /* AppDelegate.swift in Sources */,
 				63431F4A24CFB28F00D5CD05 /* HomeRepresentation.swift in Sources */,
+				63431F5A24D9A1A700D5CD05 /* MovieCell.swift in Sources */,
 				63431F5724D8F16400D5CD05 /* HomeModel.swift in Sources */,
 				63431F2724C7D23200D5CD05 /* HomeRouter.swift in Sources */,
 				63431F0E24C7CE8E00D5CD05 /* SceneDelegate.swift in Sources */,

@@ -32,9 +32,14 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         viewModel.bind(view: self, router: router)
+        tableView.register(UINib(nibName: String(describing: MovieCell.self), bundle: Bundle.main), forCellReuseIdentifier: "MovieCell")
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.dataSource = self
         tableView.delegate = self
+        getData()
+    }
 
+    private func getData() {
         viewModel.fetchPopularMoview().subscribe(onSuccess: { model in
             self.model = model
             self.reloadTableView()
@@ -59,9 +64,15 @@ extension HomeViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") else { return UITableViewCell() }
-        cell.textLabel?.text = model.movieList[indexPath.row].title
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as? MovieCell else { return UITableViewCell() }
+        cell.titleLabel.text = model.movieList[indexPath.row].title
+        cell.descriptionLabel.text = model.movieList[indexPath.row].overview
+        
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
     }
 
 }
