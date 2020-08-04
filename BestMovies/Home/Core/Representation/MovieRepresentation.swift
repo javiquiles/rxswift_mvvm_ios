@@ -26,4 +26,10 @@ struct MovieRepresentation: Codable {
         case releaseDate = "release_date"
         case image = "poster_path"
     }
+
+    func toModel() -> MovieModel {
+        return MovieModel(id: id, title: title, popularity: popularity,
+                          voteCount: voteCount, voteAverage: voteAverage,
+                          overview: overview, releaseDate: releaseDate, image: image)
+    }
 }

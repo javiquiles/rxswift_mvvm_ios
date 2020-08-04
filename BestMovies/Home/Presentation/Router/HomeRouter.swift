@@ -17,8 +17,12 @@ class HomeRouter {
     }
 
     private func resolveViewController() -> UIViewController {
-        let viewController = HomeViewController(nibName: String(describing: HomeViewController.self), bundle: Bundle.main)
+        let viewController = HomeViewController(viewModel: resolveViewModel())
         return viewController
+    }
+
+    private func resolveViewModel() -> HomeViewModel {
+        return HomeViewModel(repository: HomeRepository())
     }
 
     func setSourceView(_ sourceView: UIViewController?) {

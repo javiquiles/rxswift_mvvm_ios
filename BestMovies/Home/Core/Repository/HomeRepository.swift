@@ -8,11 +8,15 @@
 
 import RxSwift
 
-class HomeRepository {
+protocol HomeRepositoryProtocol {
+    func getPopularMovies() -> Single<HomeModel>
+}
 
-    func getPopularMovies() -> Single<HomeRepresentation> {
+class HomeRepository: HomeRepositoryProtocol {
+
+    func getPopularMovies() -> Single<HomeModel> {
         return Single.create { single in
-            let url = URL(string: Constants.URL.base + Constants.Endpoints.listPopularMovies)!
+            let url = URL(string: Constants.URL.base + Constants.Endpoints.listPopularMovies + Constants.apiKey)!
             let session = URLSession.shared
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
@@ -28,8 +32,8 @@ class HomeRepository {
                 switch response.statusCode {
                 case 200:
                     do {
-                        let model = try JSONDecoder().decode(HomeRepresentation.self, from: data)
-                        single(.success(model))
+                        let representation = try JSONDecoder().decode(HomeRepresentation.self, from: data)
+                        single(.success(representation.toModel()))
                     } catch let error {
                         single(.error(error))
                     }

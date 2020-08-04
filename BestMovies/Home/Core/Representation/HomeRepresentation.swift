@@ -12,4 +12,10 @@ struct HomeRepresentation: Codable {
     enum CodingKeys: String, CodingKey {
         case movieList = "results"
     }
+
+    func toModel() -> HomeModel {
+        return HomeModel(movieList: movieList.map { representation in
+            representation.toModel()
+        })
+    }
 }
