@@ -7,7 +7,7 @@
 //
 
 struct Constants {
-    static let apiKey = "f441ecb7123dcbb5c41647da34f09cc1"
+    static let apiKey = "?api_key=f441ecb7123dcbb5c41647da34f09cc1"
 
     struct URL {
         static let base = "https://api.themoviedb.org/3/"
