@@ -40,7 +40,8 @@ class HomeViewController: UIViewController {
     }
 
     private func getData() {
-        viewModel.fetchPopularMoview().subscribe(onSuccess: { model in
+        viewModel.fetchPopularMoview().subscribe(onSuccess: { [weak self] model in
+            guard let self = self else { return }
             self.model = model
             self.reloadTableView()
         }) { error in
@@ -64,7 +65,12 @@ extension HomeViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as? MovieCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as? MovieCell else {
+            return UITableViewCell()
+        }
+
+        let imageURL = Constants.URL.images + model.movieList[indexPath.row].image
+        cell.movieImageView?.imageFromUrl(urlString: imageURL)
         cell.titleLabel.text = model.movieList[indexPath.row].title
         cell.descriptionLabel.text = model.movieList[indexPath.row].overview
         
