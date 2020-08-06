@@ -23,6 +23,7 @@
 		63431F5724D8F16400D5CD05 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63431F5624D8F16400D5CD05 /* HomeModel.swift */; };
 		63431F5A24D9A1A700D5CD05 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63431F5824D9A1A700D5CD05 /* MovieCell.swift */; };
 		63431F5B24D9A1A700D5CD05 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63431F5924D9A1A700D5CD05 /* MovieCell.xib */; };
+		6362B7C824DB911F00F9FEBE /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6362B7C724DB911F00F9FEBE /* UIImageView+Extension.swift */; };
 		F7B248C3E5C610336D619E13 /* Pods_BestMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B20DAF119F434BDB4A8374 /* Pods_BestMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		63431F5624D8F16400D5CD05 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		63431F5824D9A1A700D5CD05 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		63431F5924D9A1A700D5CD05 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
+		6362B7C724DB911F00F9FEBE /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		A5609AFB421A99AA6EFF3ABB /* Pods-BestMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestMovies.debug.xcconfig"; path = "Target Support Files/Pods-BestMovies/Pods-BestMovies.debug.xcconfig"; sourceTree = "<group>"; };
 		C8075AD2C90BC072865902D5 /* Pods-BestMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BestMovies.release.xcconfig"; path = "Target Support Files/Pods-BestMovies/Pods-BestMovies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +162,7 @@
 			children = (
 				63431F3924C91CBA00D5CD05 /* Constants.swift */,
 				63431F5424D2FBD700D5CD05 /* SchedulerProvider.swift */,
+				6362B7C724DB911F00F9FEBE /* UIImageView+Extension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			files = (
 				63431F0C24C7CE8E00D5CD05 /* AppDelegate.swift in Sources */,
 				63431F4A24CFB28F00D5CD05 /* HomeRepresentation.swift in Sources */,
+				6362B7C824DB911F00F9FEBE /* UIImageView+Extension.swift in Sources */,
 				63431F5A24D9A1A700D5CD05 /* MovieCell.swift in Sources */,
 				63431F5724D8F16400D5CD05 /* HomeModel.swift in Sources */,
 				63431F2724C7D23200D5CD05 /* HomeRouter.swift in Sources */,
